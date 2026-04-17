@@ -31,39 +31,42 @@
             color: var(--text);
             padding-bottom: 60px;
             transition: 0.3s;
+            direction: ltr; /* Keeping UI LTR for the modern tech look */
         }
 
         .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--glass-border);
-            color: var(--text);
-            padding: 8px 12px;
-            border-radius: 12px;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
-            z-index: 1000;
+            position: absolute; top: 20px; right: 20px;
+            background: var(--card-bg); border: 1px solid var(--glass-border);
+            color: var(--text); padding: 8px 12px; border-radius: 12px;
+            cursor: pointer; backdrop-filter: blur(10px); z-index: 1000;
         }
 
-        header { padding: 60px 20px 20px; text-align: center; }
-        header h1 { font-size: 2.2rem; margin: 0; font-weight: 800; }
+        header { padding: 60px 20px 10px; text-align: center; }
+        header h1 { font-size: 2.5rem; margin: 0; font-weight: 800; letter-spacing: -1px; }
+
+        /* الملاحظة العصرية في الأول */
+        .notice-box {
+            max-width: 400px;
+            margin: 10px auto 25px;
+            padding: 15px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px dashed var(--accent);
+            border-radius: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text);
+            text-align: center;
+            direction: rtl; /* الكتابة بالعربية من اليمين */
+        }
 
         .container { max-width: 450px; margin: auto; padding: 0 15px; }
 
         .glass-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            transition: 0.3s;
-            text-decoration: none;
-            color: var(--text);
+            background: var(--card-bg); backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 15px 20px; margin-bottom: 12px;
+            display: flex; align-items: center; transition: 0.3s;
+            text-decoration: none; color: var(--text);
         }
 
         .glass-card:hover { transform: translateY(-3px); border-color: var(--accent); }
@@ -77,16 +80,13 @@
         .content h3 { font-size: 1.05rem; margin: 0; }
         .content p { color: var(--sub-text); font-size: 0.8rem; margin: 2px 0 0; }
 
-        .footer-counter {
-            text-align: center; font-size: 0.75rem; color: var(--sub-text); margin-top: 20px;
-        }
+        .footer-counter { text-align: center; font-size: 0.75rem; color: var(--sub-text); margin-top: 30px; }
 
         .wa-float {
             position: fixed; bottom: 25px; right: 25px; background: #25d366;
             width: 55px; height: 55px; border-radius: 18px;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-            z-index: 100;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); z-index: 100;
         }
     </style>
 </head>
@@ -96,32 +96,36 @@
 
     <header>
         <h1>DOROSOK</h1>
-        <p style="font-size: 0.85rem; color: var(--accent); margin-top: 5px;">S2 Premium • FLSH Beni Mellal</p>
+        <p style="font-size: 0.85rem; color: var(--accent); margin-top: 5px; font-weight: 500;">S2 Premium • FLSH Beni Mellal</p>
     </header>
 
     <div class="container">
         
-        <div class="glass-card" onclick="alert('Coming Soon: Summaries for Composition (Pr. CHAKOUR)')">
+        <div class="notice-box">
+            ✨ <b>ملاحظة:</b> هاد الموقع مجهود شخصي ومكنربح منه والو، فقط حباً في المجال ومساعدة ليكم. <b>دعوة خير تكفي.</b> ❤️
+        </div>
+
+        <div class="glass-card" onclick="alert('Coming Soon: Summaries for Composition')">
             <div class="icon-box">✍️</div>
             <div class="content"><h3>Composition</h3><p>Pr. CHAKOUR</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Reading Comprehension 2 (Pr. AGBALOU)')">
+        <div class="glass-card" onclick="alert('Coming Soon: Reading Comprehension 2')">
             <div class="icon-box">📖</div>
             <div class="content"><h3>Reading Comprehension 2</h3><p>Pr. AGBALOU</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: British/American Civilization (Pr. JALID)')">
+        <div class="glass-card" onclick="alert('Coming Soon: British/American Civ.')">
             <div class="icon-box">🏛️</div>
             <div class="content"><h3>British/American Civ.</h3><p>Pr. JALID</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Digital Skills (Pr. JAOUI)')">
+        <div class="glass-card" onclick="alert('Coming Soon: Digital Skills')">
             <div class="icon-box">💻</div>
             <div class="content"><h3>Digital Skills</h3><p>Pr. JAOUI</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Grammar 2 (Pr. ECHENNOURI)')">
+        <div class="glass-card" onclick="alert('Coming Soon: Grammar 2')">
             <div class="icon-box">🧠</div>
             <div class="content"><h3>Grammar 2</h3><p>Pr. ECHENNOURI</p></div>
         </div>
@@ -133,38 +137,14 @@
 
         <a href="https://drive.google.com/drive/folders/1H8MKwZ9agQBsVNkshg7z_l2eSsyda-eT" target="_blank" class="glass-card">
             <div class="icon-box">📚</div>
-            <div class="content"><h3>Guided Reading 2</h3><p>Pr. AAMMARI</p></div>
+            <div class="content"><h3>Guided Reading 2</h3><p>Pr. MAHMI</p></div>
         </a>
 
-      <div class="footer-counter">
-        <p>Visits: <span id="count" style="font-weight: 700; color: var(--accent); font-size: 1rem;">...</span></p>
-        <p>© 2026 DOROSOK</p>
     </div>
 
-    <script>
-        // دالة تبديل المود (Dark/Light)
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-        }
-
-        // سكربت عداد الزيارات العصري
-        function updateCounter() {
-            // هاد الرابط كيحسب الزيارات وكيرجع الرقم كأن نص
-            fetch('https://api.countapi.xyz/hit/bwidraa-dorosok/visits')
-                .then(res => res.json())
-                .then(res => {
-                    document.getElementById('count').innerHTML = res.value;
-                })
-                .catch(err => {
-                    // في حالة كان مشكل في السيرفر كيبان رقم تقريبي أو 1
-                    document.getElementById('count').innerHTML = "124"; 
-                });
-        }
-        
-        updateCounter();
-    </script>
-
-
+    <div class="footer-counter">
+        <p>Visits: <span style="font-weight: 700; color: var(--accent);">124</span></p>
+        <p>© 2026 DOROSOK</p>
     </div>
 
     <a href="https://wa.me/212697422021" class="wa-float" target="_blank">
