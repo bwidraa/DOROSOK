@@ -31,7 +31,6 @@
             color: var(--text);
             padding-bottom: 60px;
             transition: 0.3s;
-            direction: ltr; /* Keeping UI LTR for the modern tech look */
         }
 
         .theme-toggle {
@@ -44,20 +43,46 @@
         header { padding: 60px 20px 10px; text-align: center; }
         header h1 { font-size: 2.5rem; margin: 0; font-weight: 800; letter-spacing: -1px; }
 
-        /* الملاحظة العصرية في الأول */
         .notice-box {
             max-width: 400px;
-            margin: 10px auto 25px;
+            margin: 10px auto 15px;
             padding: 15px;
             background: rgba(99, 102, 241, 0.1);
             border: 1px dashed var(--accent);
             border-radius: 15px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.5;
             color: var(--text);
             text-align: center;
-            direction: rtl; /* الكتابة بالعربية من اليمين */
+            direction: rtl;
         }
+
+        .feedback-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            margin: 0 auto 25px;
+            padding: 14px;
+            background: var(--accent);
+            border-radius: 15px;
+            text-decoration: none;
+            color: white !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            direction: rtl;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .feedback-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
         .container { max-width: 450px; margin: auto; padding: 0 15px; }
 
@@ -105,27 +130,31 @@
             ✨ <b>ملاحظة:</b> هاد الموقع مجهود شخصي ومكنربح منه والو، فقط حباً في المجال ومساعدة ليكم. <b>دعوة خير تكفي.</b> ❤️
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Summaries for Composition')">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfC9ZysiDgSbzRhi3upqVvaIaTiEzC8bsVy1gQ3mxazHZEKpQ/viewform?usp=sf_link" target="_blank" class="feedback-btn">
+             💬 شاركنا رأيك لتحسين الموقع ➔
+        </a>
+
+        <div class="glass-card" onclick="alert('Coming Soon: Composition (Pr. CHAKOUR)')">
             <div class="icon-box">✍️</div>
             <div class="content"><h3>Composition</h3><p>Pr. CHAKOUR</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Reading Comprehension 2')">
+        <div class="glass-card" onclick="alert('Coming Soon: Reading Comprehension 2 (Pr. AGBALOU)')">
             <div class="icon-box">📖</div>
             <div class="content"><h3>Reading Comprehension 2</h3><p>Pr. AGBALOU</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: British/American Civ.')">
+        <div class="glass-card" onclick="alert('Coming Soon: British/American Civ. (Pr. JALID)')">
             <div class="icon-box">🏛️</div>
             <div class="content"><h3>British/American Civ.</h3><p>Pr. JALID</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Digital Skills')">
+        <div class="glass-card" onclick="alert('Coming Soon: Digital Skills (Pr. JAOUI)')">
             <div class="icon-box">💻</div>
             <div class="content"><h3>Digital Skills</h3><p>Pr. JAOUI</p></div>
         </div>
 
-        <div class="glass-card" onclick="alert('Coming Soon: Grammar 2')">
+        <div class="glass-card" onclick="alert('Coming Soon: Grammar 2 (Pr. ECHENNOURI)')">
             <div class="icon-box">🧠</div>
             <div class="content"><h3>Grammar 2</h3><p>Pr. ECHENNOURI</p></div>
         </div>
