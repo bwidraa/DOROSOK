@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOROSOK - USMS Beni Mellal S2</title>
+    <style>
+        :root {
+            --primary: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --accent: #f39c12;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--accent);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        .sub-header { font-size: 1rem; opacity: 0.9; margin-top: 10px; }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent);
+            transition: 0.3s;
+        }
+
+        .module-card:hover { transform: translateY(-5px); }
+
+        .module-card h3 {
+            color: #1e3c72;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .prof-name {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .btn-link {
+            display: block;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--whatsapp);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DOROSOK</h1>
+        <p class="sub-header">Faculté des Lettres et des Sciences Humaines - Beni Mellal</p>
+        <div style="margin-top:15px;"><span style="background:var(--accent); padding:5px 15px; border-radius:20px; font-weight:bold;">Semester 2 - Group 01</span></div>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:30px;">📚 Your S2 Modules</h2>
+        
+        <div class="grid-container">
+            
+            <div class="module-card">
+                <h3>Composition</h3>
+                <p class="prof-name">Pr. CHAKOUR</p>
+                <a href="#" class="btn-link">Summaries & Exercises</a>
+            </div>
+
+            <div class="module-card">
+                <h3>Reading Comprehension & Precis 2</h3>
+                <p class="prof-name">Pr. AGBALOU</p>
+                <a href="#" class="btn-link">Get Course Content</a>
+            </div>
+
+            <div class="module-card">
+                <h3>British/American Civilization</h3>
+                <p class="prof-name">Pr. JALID</p>
+                <a href="#" class="btn-link">History Summaries</a>
+            </div>
+
+            <div class="module-card">
+                <h3>Digital Skills</h3>
+                <p class="prof-name">Pr. JAOUI</p>
+                <a href="#" class="btn-link">Practical Guides</a>
+            </div>
+
+            <div class="module-card">
+                <h3>Grammar 2</h3>
+                <p class="prof-name">Pr. ECHENNOURI</p>
+                <a href="#" class="btn-link">Grammar Rules PDF</a>
+            </div>
+
+            <div class="module-card">
+                <h3>Oral Communication</h3>
+                <p class="prof-name">Pr. JEBBAR</p>
+                <a href="#" class="btn-link">Audio & Tips</a>
+            </div>
+
+            <div class="module-card">
+                <h3>Guided Reading 2</h3>
+                <p class="prof-name">Pr. MAHMI</p>
+                <a href="#" class="btn-link">Book Analysis</a>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="https://wa.me/21269742021" class="whatsapp-float">
+        💬 Student Support
+    </a>
+
+    <footer style="text-align:center; padding:40px; color:#bdc3c7;">
+        <p>&copy; 2026 DOROSOK Beni Mellal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
